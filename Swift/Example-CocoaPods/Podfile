@@ -2,5 +2,5 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Example-CocoaPods' do
-    pod 'GDPerformanceView-Swift', '~> 1.1.2'
+    pod 'GDPerformanceView-Swift', '~> 1.2.0'
 end
