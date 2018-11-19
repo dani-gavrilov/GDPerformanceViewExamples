@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C340AC921A3507A00734F1C /* LaggyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C340AC821A3507A00734F1C /* LaggyTableViewCell.swift */; };
 		42908E0E1E258E2E002F71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42908E0D1E258E2E002F71AE /* AppDelegate.swift */; };
 		42908E101E258E2E002F71AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42908E0F1E258E2E002F71AE /* ViewController.swift */; };
 		42908E131E258E2E002F71AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42908E111E258E2E002F71AE /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C340AC821A3507A00734F1C /* LaggyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaggyTableViewCell.swift; sourceTree = "<group>"; };
 		42908E0A1E258E2E002F71AE /* Example-Carthage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-Carthage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42908E0D1E258E2E002F71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42908E0F1E258E2E002F71AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				42908E0D1E258E2E002F71AE /* AppDelegate.swift */,
 				42908E0F1E258E2E002F71AE /* ViewController.swift */,
+				0C340AC821A3507A00734F1C /* LaggyTableViewCell.swift */,
 				42908E111E258E2E002F71AE /* Main.storyboard */,
 				42908E141E258E2E002F71AE /* Assets.xcassets */,
 				42908E161E258E2E002F71AE /* LaunchScreen.storyboard */,
@@ -104,7 +107,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Daniil Gavrilov";
 				TargetAttributes = {
 					42908E091E258E2E002F71AE = {
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42908E101E258E2E002F71AE /* ViewController.swift in Sources */,
+				0C340AC921A3507A00734F1C /* LaggyTableViewCell.swift in Sources */,
 				42908E0E1E258E2E002F71AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +211,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -214,6 +219,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -263,6 +269,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -270,6 +277,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -314,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "GD.Example-Carthage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -333,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "GD.Example-Carthage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

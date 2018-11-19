@@ -24,8 +24,7 @@ import UIKit
 
 import GDPerformanceView_Swift
 
-class ViewController: UITableViewController, GDPerformanceMonitorDelegate {
-    
+class ViewController: UITableViewController, PerformanceMonitorDelegate {
     // MARK: Private Properties
     
     private var performanceReports: Array<String> = []
@@ -41,7 +40,7 @@ class ViewController: UITableViewController, GDPerformanceMonitorDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        GDPerformanceMonitor.sharedInstance.delegate = self
+        PerformanceMonitor.shared().delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,40 +63,46 @@ class ViewController: UITableViewController, GDPerformanceMonitorDelegate {
     // MARK: UITableViewDelegate & UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.performanceReports.count
+        return 10000
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: self.cellReuseIdentifier)
-        }
-        return cell!
+        let title = self.randomStringWithLength(len: Int.random(in: 10..<1000))
+        let imageName = "img-\(Int.random(in: 0..<29))"
+        let image = UIImage(named: imageName)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LaggyTableViewCell") as! LaggyTableViewCell
+        cell.configure(title: title, image: image)
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.configurePerformanceReport(cell: cell, at: indexPath)
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     // MARK: GDPerformanceMonitorDelegate
     
-    func performanceMonitorDidReport(fpsValue: Int, cpuValue: Float) {
-        let reportString = String(format: "FPS : %d; CPU : %.1f%%", fpsValue, cpuValue)
-        
-        self.tableView.beginUpdates()
-        
-        let insertIndexPath = IndexPath.init(row: 0, section: 0)
-        self.tableView.insertRows(at: [insertIndexPath], with: .right)
-        
-        self.performanceReports.insert(reportString, at: 0)
-        
-        if (self.performanceReports.count > 10) {
-            self.performanceReports.removeLast()
-            
-            let deleteIndexPath = IndexPath.init(row: 9, section: 0)
-            self.tableView.deleteRows(at: [deleteIndexPath], with: .left)
+    func performanceMonitor(didReport performanceReport: PerformanceReport) {
+        print(performanceReport)
+    }
+    
+    // MARK: Support Methods
+    
+    private func randomStringWithLength (len : Int) -> String {
+        let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let randomString = NSMutableString(capacity: len)
+        for _ in 0..<len {
+            let length = UInt32 (letters.length)
+            let rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.character(at: Int(rand)))
         }
-        
-        self.tableView.endUpdates()
+        return randomString as String
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C340AA821A341A800734F1C /* LaggyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C340AA721A341A800734F1C /* LaggyTableViewCell.swift */; };
 		0C93DF6884202C8B553C9916 /* Pods_Example_CocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3667270BEF3BB1959C5517EB /* Pods_Example_CocoaPods.framework */; };
 		42908DF01E2583B8002F71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42908DEF1E2583B8002F71AE /* AppDelegate.swift */; };
 		42908DF21E2583B8002F71AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42908DF11E2583B8002F71AE /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C340AA721A341A800734F1C /* LaggyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaggyTableViewCell.swift; sourceTree = "<group>"; };
 		3667270BEF3BB1959C5517EB /* Pods_Example_CocoaPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_CocoaPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42908DEC1E2583B8002F71AE /* Example-CocoaPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-CocoaPods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42908DEF1E2583B8002F71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				42908DEF1E2583B8002F71AE /* AppDelegate.swift */,
 				42908DF11E2583B8002F71AE /* ViewController.swift */,
+				0C340AA721A341A800734F1C /* LaggyTableViewCell.swift */,
 				42908DF31E2583B8002F71AE /* Main.storyboard */,
 				42908DF61E2583B8002F71AE /* Assets.xcassets */,
 				42908DF81E2583B8002F71AE /* LaunchScreen.storyboard */,
@@ -99,8 +102,7 @@
 				42908DE81E2583B8002F71AE /* Sources */,
 				42908DE91E2583B8002F71AE /* Frameworks */,
 				42908DEA1E2583B8002F71AE /* Resources */,
-				407332F1C3C793ECC8F18FD7 /* [CP] Embed Pods Frameworks */,
-				ECFFF79D2DCF6E71BD69DF47 /* [CP] Copy Pods Resources */,
+				71A1C42C5DD1AE32C6255C28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -118,7 +120,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Daniil Gavrilov";
 				TargetAttributes = {
 					42908DEB1E2583B8002F71AE = {
@@ -160,13 +162,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		407332F1C3C793ECC8F18FD7 /* [CP] Embed Pods Frameworks */ = {
+		71A1C42C5DD1AE32C6255C28 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example-CocoaPods/Pods-Example-CocoaPods-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Example-CocoaPods/Pods-Example-CocoaPods-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -175,7 +177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-CocoaPods/Pods-Example-CocoaPods-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-CocoaPods/Pods-Example-CocoaPods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD694461DAE49CE1622C5DBC /* [CP] Check Pods Manifest.lock */ = {
@@ -196,21 +198,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ECFFF79D2DCF6E71BD69DF47 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-CocoaPods/Pods-Example-CocoaPods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42908DF21E2583B8002F71AE /* ViewController.swift in Sources */,
+				0C340AA821A341A800734F1C /* LaggyTableViewCell.swift in Sources */,
 				42908DF01E2583B8002F71AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +246,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -265,6 +254,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -297,6 +287,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -314,6 +305,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -321,6 +313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -345,6 +338,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -363,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "GD.Example-CocoaPods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -380,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "GD.Example-CocoaPods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

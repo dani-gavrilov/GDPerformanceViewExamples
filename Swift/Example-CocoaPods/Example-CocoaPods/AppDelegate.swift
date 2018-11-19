@@ -29,14 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        GDPerformanceMonitor.sharedInstance.startMonitoring { (textLabel) in
-            textLabel?.backgroundColor = .orange
-            textLabel?.textColor = .white
-            textLabel?.layer.borderColor = UIColor.yellow.cgColor
-        }
-        GDPerformanceMonitor.sharedInstance.appVersionHidden = true
+        PerformanceMonitor.shared().start()
         
         return true
     }
